@@ -10,7 +10,7 @@ let defaultTheme = {
   // block element
   block: {
     h1: {
-      'font-size': '1.2em',
+      'font-size': '1.6em',
       'text-align': 'center',
       'font-weight': 'bold',
       'display': 'table',
@@ -19,17 +19,17 @@ let defaultTheme = {
       'border-bottom': '1px solid rgb(248,57,41)'
     },
     h2: {
-      'font-size': '1.2em',
+      'font-size': '1.6em',
       'text-align': 'center',
       'font-weight': 'bold',
       'display': 'table',
-      'margin': '4em auto 2em auto',
+      'margin': '2em auto 2em auto',
       'padding': '0 1em',
       'border-bottom': '1px solid rgb(248,57,41)'
     },
     h3: {
       'font-weight': 'bold',
-      'font-size': '1.1em',
+      'font-size': '1.5em',
       'margin': '2em 8px 0.75em 0',
       'padding-bottom': '.1em',
       // 'border-bottom': '1px solid #eaecef',
@@ -38,8 +38,9 @@ let defaultTheme = {
     },
     h4: {
       'font-weight': 'bold',
-      'font-size': '1em',
+      'font-size': '1.4em',
       'margin': '2em 8px 0.5em 8px',
+      'color':'rgba(15, 76, 129, 1)',
     },
     p: {
       'margin': '1.5em 8px',
