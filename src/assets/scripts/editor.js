@@ -37,7 +37,8 @@ let app = new Vue({
         lyric: lyricTheme,
         lupeng: lupengTheme
       },
-      aboutDialogVisible: false
+      aboutDialogVisible: false,
+      linkGenerate: true,
     };
     d.currentEditorTheme = d.editorThemes[0].value;
     d.currentFont = d.builtinFonts[0].value;
@@ -85,7 +86,9 @@ let app = new Vue({
         // 去除第一行的 margin-top
         output = output.replace(/(style=".*?)"/, '$1;margin-top: 0"');
         // 引用注脚
-        output += this.wxRenderer.buildFootnotes();
+        if(this.linkGenerate){
+          output += this.wxRenderer.buildFootnotes();
+        }
         // 附加的一些 style
         output += this.wxRenderer.buildAddition();
       }
@@ -111,6 +114,9 @@ let app = new Vue({
       this.wxRenderer.setOptions({
         theme: themeObject
       });
+      this.refresh()
+    },
+    linkGenerateChanged: function (flag){
       this.refresh()
     },
     // 刷新右侧预览
